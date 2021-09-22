@@ -58,8 +58,55 @@
     </div>
 </div>
 
+
+<div class="container">
+    <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2" id="scroll">
+        <div class="col-5">
+            <div class="card card-block card-1"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-2"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-3"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-4"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-5"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-6"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-7"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-8"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-9"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-10"></div>
+        </div>
+    </div>
+    <div class="text-center paddle paddlenav-framed paddlenav-light-content">
+        <ul>
+            <li>
+                <button id="scroll_prev" class="rounded-circle gallery-btn"><i class="fas fa-chevron-left"></i></button>
+            </li>
+            <li>
+                <button id="scroll_next" class="rounded-circle gallery-btn"><i class="fas fa-chevron-right"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <div class="container blur p-4 content">
-    <div class="row g-5">
+    <div class="row mt-0 g-5">
         <div class="col-md-8 " id="article">
             <h1 class="pb-4 mb-4 fst-italic border-bottom">Title of this Passage</h1>
             <article class="blog-post">
@@ -332,53 +379,6 @@
 <script src="static/js/init.js"></script>
 <!-- for test -->
 <script>
-    const renderer = new marked.Renderer();
-    renderer.code = function (code, lang, escaped) {
-        code = this.options.highlight(code, lang);
-        if (!lang) {
-            return `<pre><code class="language-text">${code}</code></pre>`;
-        }
-        const langClass = "language-" + lang;
-        return `<pre class="${langClass} rainbow-braces line-numbers"><code class="${langClass} match-braces">${code}</code></pre>`;
-    }
-
-    marked.setOptions({
-        renderer: renderer,
-        highlight: function (code, lang) {
-            try {
-                console.log("Prism initialization")
-                return Prism.highlight(code, Prism.languages[lang], lang);
-            } catch {
-                return code;
-            }
-        },
-    });
-
-    // $.ajax({
-    //     "type": 'get',
-    //     "url": 'http://localhost:8080/downloadFile?id=1134629f-c718-4a7f-966e-c0483adf0d12',
-    //     "dataType": "text",
-    //     "permissions": "http://localhost:8080/",
-    //     "success": function (data) {
-    //         document.getElementById('content').innerHTML = marked(data);
-    //         console.log("ajax:" + new Date())
-    //         Prism.highlightAll();  // Rerun Prism syntax highlighting on the current page
-    //     }
-    // })
-
-    $(function () {
-        const navSelector = "#table_of_content";
-        const $myNav = $(navSelector);
-        Toc.init($myNav);
-        $("#article").scrollspy({
-            target: navSelector
-        });
-    });
-
-    $(document).ready(function () {
-        // Handler for .ready() called.
-        console.log("document is ready!")
-        $('ul.navbar-nav .active').removeClass('active');
-    });
+    console.log("Something for test.")
 </script>
 </html>
