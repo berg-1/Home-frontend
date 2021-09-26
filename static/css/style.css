@@ -260,17 +260,17 @@ input:checked + .slider {
 }
 
 .disabled {
-    pointer-events:none;
+    pointer-events: none;
     color: #fff;
-    opacity:.65;
+    opacity: .65;
     border: none;
 }
-
 
 .scrolling-wrapper {
     overflow-x: auto;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    border-radius: 24px;
 }
 
 .scrolling-wrapper::-webkit-scrollbar {
@@ -278,6 +278,7 @@ input:checked + .slider {
 }
 
 .card-block {
+    color: var(--white);
     height: 250px;
     background-color: #fff;
     border: none;
@@ -290,6 +291,12 @@ input:checked + .slider {
 .card-block:hover {
     transform: translateY(-5px);
     box-shadow: none;
+}
+
+.card-block-header {
+    opacity: 0.8;
+    font-size: 3em;
+    padding: .5em;
 }
 
 .card-1 {
