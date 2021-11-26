@@ -78,6 +78,44 @@
     --article-bg: var(--black);
 }
 
+@media (prefers-color-scheme: light) {
+    body {
+        --bg: var(--light-bg);
+        --fontColor: var(--black);
+        --headline-color: var(--blackest);
+        --nav-link: var(--primary);
+        --title-color: var(--primary);
+        --nav-link-bg: var(--primary);
+        --link-color: var(--primary-light);
+        --link-hover-color: var(--primary-lighter);
+        --dark-switch: var(--dark-grey);
+        --footer-font-color: var(--dark-grey);
+        --rotate-adjust: rotate(0deg);
+        --copy-right: var(--muted);
+        --notice-bg: var(--light-pure-bg);
+        --article-bg: var(--white);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg: var(--dark-bg);
+        --fontColor: var(--night-white);
+        --headline-color: var(--whitest);
+        --nav-link: var(--primary-dark);
+        --title-color: var(--white);
+        --nav-link-bg: var(--secondary);
+        --link-color: var(--light-ocean-blue);
+        --link-hover-color: var(--ocean-blue);
+        --dark-switch: var(--white);
+        --footer-font-color: var(--light-grey);
+        --rotate-adjust: rotate(180deg);
+        --copy-right: var(--muted-light);
+        --notice-bg: var(--dark-pure-bg);
+        --article-bg: var(--black);
+    }
+}
+
 * {
     font-family: "JetBrains Mono Bold", var(--Heiti), serif;
     transition: background-image 0.6s ease-in-out;

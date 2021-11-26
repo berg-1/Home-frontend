@@ -15,10 +15,17 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-// 更改主题(黑夜-白天)
+// 更改主题(黑夜-白天)  根据系统颜色做出自动调整
 const themeSwitch = document.querySelector('input');
 themeSwitch.addEventListener('change', () => {
-    document.body.classList.toggle('dark-theme');  // change web mode
+    const mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)');
+    if (mediaQueryListDark.matches){
+        document.body.classList.toggle('light-theme');  // change web mode
+        console.log('Current System theme: dark-theme')
+    } else {
+        document.body.classList.toggle('dark-theme');  // change web mode
+        console.log('Current System theme: light-theme')
+    }
     togglePrismTheme()  // switch prism theme
 });
 
