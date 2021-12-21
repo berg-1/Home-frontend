@@ -19,17 +19,24 @@ function topFunction() {
 const themeSwitch = document.querySelector('input');
 themeSwitch.addEventListener('change', () => {
     const mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)');
-    if (mediaQueryListDark.matches){
-        document.body.classList.toggle('light-theme');  // change web mode
-        console.log('Current System theme: dark-theme')
+    if (mediaQueryListDark.matches) {
+        document.body.classList.toggle('light-theme');
     } else {
-        document.body.classList.toggle('dark-theme');  // change web mode
-        console.log('Current System theme: light-theme')
+        document.body.classList.toggle('dark-theme');
     }
     togglePrismTheme()  // switch prism theme
 });
 
 jQuery(function () {
     // Handler for .ready() called.
+    // init page theme
+    // const mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)');
+    // if (mediaQueryListDark.matches) {
+    //     document.body.classList.add('dark-theme');
+    //     console.log('Current System theme: dark-theme')
+    // } else {
+    //     document.body.classList.add('light-theme');
+    //     console.log('Current System theme: light-theme')
+    // }
 });
 

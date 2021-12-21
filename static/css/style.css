@@ -30,8 +30,8 @@
     --muted: #4e5153;
     --muted-light: #9fb1c6;
     /* Background */
-    --light-bg: url("../images/wallpapers/Monterey-light.jpeg");
-    --dark-bg: url("../images/wallpapers/Monterey-dark.jpeg");
+    --light-bg: url("../images/wallpapers/wwdc4.jpg");
+    --dark-bg: url("../images/wallpapers/wwdc3.jpg");
     --banner-bg: url("../images/wallpapers/wallhaven-57zp87.png");
     --light-pure-bg: hsla(0, 0%, 100%, .3);
     --dark-pure-bg: hsla(0, 0%, 100%, .3);
@@ -149,10 +149,11 @@ p {
 
 /* common css */
 .main {
-    background-image: var(--bg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    /*background-image: var(--bg);*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-size:  100% auto,100% auto;*/
+    background: var(--bg) no-repeat fixed center / cover;
 }
 
 
@@ -441,7 +442,7 @@ input:checked + .slider {
 
 .footer-link {
     display: block;
-    font-size: .8vmax;
+    font-size: calc(0.3rem + .4vw);
     padding: .5rem 1rem;
     text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
@@ -505,11 +506,6 @@ input:checked + .slider {
     left: 0;
     z-index: -1;
     border-radius: var(--border-radius-rounded);
-    /*background-color: #07a3d7;*/
-    /*background-image: linear-gradient(315deg, #07a3d7 0%, #69bad7 74%);*/
-    /*box-shadow: inset 2px 2px 2px 0 rgba(255, 255, 255, .5),*/
-    /*7px 7px 20px 0 rgba(0, 0, 0, .1),*/
-    /*4px 4px 5px 0 rgba(0, 0, 0, .1);*/
     transition: all 0.3s ease;
 }
 
