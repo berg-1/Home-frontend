@@ -72,18 +72,14 @@ marked.setOptions({
     },
 });
 
-// $.ajax({
-//     "type": 'get',
-//     "url": 'http://localhost:8080/downloadFile?id=1134629f-c718-4a7f-966e-c0483adf0d12',
-//     "dataType": "text",
-//     "permissions": "http://localhost:8080/",
-//     "success": function (data) {
-//         document.getElementById('content').innerHTML = marked(data);
-//         console.log("ajax:" + new Date())
-//         Prism.highlightAll();  // Rerun Prism syntax highlighting on the current page
-//     }
-// })
-
+const themeMediaLight = window.matchMedia("(prefers-color-scheme: dark)");
+if (themeMediaLight.matches) {
+    togglePrismTheme();  // switch prism theme
+}
+themeMediaLight.addEventListener("change", () => {
+    console.log('Toggle Theme');
+    togglePrismTheme();  // switch prism theme
+});
 toc()
 jQuery(function () {
     // Handler for .ready() called.

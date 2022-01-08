@@ -23,8 +23,8 @@ themeSwitch.addEventListener('change', () => {
         document.body.classList.toggle('light-theme');
     } else {
         document.body.classList.toggle('dark-theme');
+        togglePrismTheme();
     }
-    togglePrismTheme()  // switch prism theme
 });
 
 jQuery(function () {
